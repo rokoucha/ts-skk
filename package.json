@@ -1,0 +1,50 @@
+{
+  "name": "ts-skk",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "repository": "ssh://git@github.com/rokoucha/ts-skk.git",
+  "author": "Rokoucha <git@rokoucha.net>",
+  "license": "MIT",
+  "dependencies": {
+    "transform-ts": "^0.3.0",
+    "webextension-polyfill-ts": "^0.19.0"
+  },
+  "devDependencies": {
+    "@types/copy-webpack-plugin": "^6.0.0",
+    "@types/eslint": "^7.2.0",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/prettier": "^2.0.2",
+    "@types/rimraf": "^3.0.0",
+    "@types/tsc-watch": "^4.2.0",
+    "@types/webpack": "^4.41.21",
+    "@types/webpack-dev-server": "^3.11.0",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "html-webpack-plugin": "^4.3.0",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^8.0.1",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^3.9.7",
+    "typesync": "^0.7.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
+  },
+  "scripts": {
+    "build": "yarn run clean && webpack --config webpack.prod.js",
+    "clean": "rimraf ./dist",
+    "dev": "yarn run clean && webpack-dev-server --config webpack.dev.js",
+    "eslint:fix": "eslint --ext js,ts --fix ./src",
+    "eslint": "eslint --ext js,ts ./src",
+    "preinstall": "typesync || :",
+    "prettier:fix": "prettier --write \"./**/*.{html,json,md}\"",
+    "prettier": "prettier --check \"./**/*.{html,json,md}\""
+  }
+}

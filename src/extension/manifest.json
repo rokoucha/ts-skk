@@ -1,0 +1,21 @@
+{
+  "name": "TS-SKK Japanese Input",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "SKK implementation written in TypeScript",
+  "background": {
+    "scripts": ["main.js"]
+  },
+  "options_page": "options.html",
+  "permissions": ["input"],
+  "input_components": [
+    {
+      "description": "SKK implementation written in TypeScript",
+      "id": "net.rokoucha.skk.us",
+      "language": "ja",
+      "layouts": ["ja", "us"],
+      "name": "SKK(for US keyboard)",
+      "type": "ime"
+    }
+  ]
+}
